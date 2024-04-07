@@ -1,0 +1,527 @@
+@font-face {
+    font-family: "Cardo-Medium";
+    src: url("./fonts/cardo/Cardo-Medium.woff2");
+}
+
+@font-face {
+    font-family: "Cardo-Regular";
+    src: url("./fonts/cardo/Cardo-Regular.woff2");
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("./fonts/inter/Inter.woff2");
+}
+
+:root {
+    --base: #f5f1eb;
+    --base-2: #ffffff;
+    --contrast: #673d29;
+    --contrast-2: #673d2966;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--base);
+    color: var(--contrast);
+    font-family: "Inter";
+    font-size: 1.3rem;
+}
+
+h1 {
+    font-family: "Cardo-Medium";
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-family: "Cardo-Regular";
+    font-size: 2rem;
+}
+
+
+h3 {
+    font-family: "Inter";
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--contrast);
+    background-image: url('./images/image-0.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-attachment: fixed;
+    color: var(--base-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+}
+
+.banner div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner h1 {
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-transform: capitalize;
+}
+
+.banner h1 span:first-of-type {
+    display: block;
+    font-family: "Inter";
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 3rem;
+}
+
+.banner h1 span:last-of-type {
+    display: block;
+    font-size: 2rem;
+}
+
+.banner a {
+    background-color: var(--base-2);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    color: var(--contrast);
+    display: inline-block;
+    margin-top: 4rem;
+    padding: 0.8rem 2.8rem;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    padding: 4rem;
+    min-height: 100vh;
+}
+
+.welcome .text {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4rem;
+    height: auto;
+    max-height: 75%;
+}
+
+.welcome .image {
+    flex: 1;
+    width: 100%;
+    max-height: 50vh;
+    overflow: hidden;
+}
+
+.welcome .image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.accommodations {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 4rem;
+    padding: 4rem;
+}
+
+.accommodations h2 {
+    grid-column: 1 / span 1;
+    text-align: center;
+}
+
+.accommodations article {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.accommodations article img {
+    flex: 2;
+    width: 100%;
+    height: auto;
+    max-height: 75%;
+    object-fit: cover;
+}
+
+.accommodations article .details {
+    flex: 1;
+    grid-column: 1 / span 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    border: 1px solid var(--contrast);
+    padding: 1.3rem;
+}
+
+.accommodations article .details div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.accommodations article .details p {
+    font-size: 0.9rem;
+}
+
+.the-family-suite {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 4rem;
+    padding: 4rem;
+}
+
+.the-family-suite .text {
+    grid-column: 1 / span 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4rem;
+    height: 100%;
+    padding: 1rem;
+}
+
+.the-family-suite .image {
+    grid-column: 1 / span 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    overflow: hidden;
+}
+
+.the-family-suite .image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.the-family-suite .image .details {
+    grid-column: 1 / span 1;
+    border: 1px solid var(--contrast);
+    padding: 1.3rem;
+    font-size: 0.9rem;
+}
+
+.the-family-suite .gallery {
+    grid-column: span 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 4rem;
+}
+
+.the-family-suite .gallery .image:first-of-type {
+    grid-column: 1 / span 1;
+}
+
+.the-family-suite .gallery .image:last-of-type {
+    grid-column: 1 / span 1;
+}
+
+.the-family-suite .gallery img {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.promos-and-offers {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    /* grid-template-rows: minmax(auto, 50vh); */
+    gap: 4rem;
+    padding: 4rem;
+}
+
+.promos-and-offers h2 {
+    grid-column: 1 / span 1;
+    text-align: center;
+}
+
+.promos-and-offers article {
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.promos-and-offers article img {
+    flex: 2;
+    width: 100%;
+    height: auto;
+    max-height: 50%;
+    object-fit: cover;
+}
+
+.promos-and-offers article .details {
+    flex: 1;
+    grid-column: 1 / span 1;
+    min-height: 25%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1rem;
+    border: 1px solid var(--contrast);
+    padding: 1.3rem;
+}
+
+.promos-and-offers article .details p {
+    font-size: 0.9rem;
+}
+
+.in-the-press {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--contrast);
+    background-image: url('./images/image-0.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-attachment: fixed;
+    color: var(--base-2);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    /* grid-template-rows: minmax(auto, 25vh); */
+    gap: 4rem;
+    padding: 4rem;
+}
+
+.in-the-press h2 {
+    grid-column: 1 / span 1;
+    text-align: center;
+}
+
+.in-the-press article {
+    width: 100%;
+    grid-column: span 1;
+    min-height: 25%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.3rem;
+}
+
+.in-the-press article .quote {
+    width: 2rem;
+    height: 2rem;
+}
+
+.in-the-press article .quote svg {
+    width: 100%;
+    height: 100%;
+}
+
+.in-the-press article h3 {
+    font-size: 0.9rem;
+    line-height: normal;
+}
+
+.in-the-press article p {
+    font-size: 1rem;
+}
+
+.in-the-press article .author {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.in-the-press article .author span {
+    font-size: 1rem;
+    line-height: normal;
+}
+
+.the-wellhall {
+    width: 100%;
+    background-color: var(--contrast);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-attachment: fixed;
+    color: var(--base-2);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    /* grid-template-rows: minmax(auto, 25vh); */
+    gap: 4rem;
+    padding: 4rem;
+}
+
+.the-wellhall h2 {
+    grid-column: 1 / span 1;
+    text-align: start;
+    font-size: 3rem;
+}
+
+.the-wellhall>div {
+    width: 100%;
+    grid-column: span 1;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.3rem;
+    border: 1px solid var(--base-2);
+}
+
+.the-wellhall>div .item {
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.the-wellhall>div .item .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.the-wellhall>div .icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.the-wellhall>div a {
+    width: 100%;
+    height: auto;
+    padding: 1rem 3rem;
+    border: 1px solid var(--base-2);
+    border-radius: 50px;
+    color: var(--base-2);
+    font-size: 0.9rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 5rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    .banner h1 span:first-of-type {
+        font-size: 1.2rem;
+    }
+
+    .banner h1 span:last-of-type {
+        font-size: 3rem;
+    }
+
+    .welcome {
+        flex-direction: row;
+        height: 100vh;
+        padding: 4rem;
+    }
+
+    .welcome .text {
+        max-width: 50vw;
+        padding: 0 4rem 0 0;
+    }
+
+    .welcome .image {
+        max-height: 100%;
+    }
+
+    .accommodations {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: minmax(auto, 25vh);
+    }
+
+    .accommodations h2 {
+        grid-column: 1 / span 3;
+    }
+
+    .the-family-suite {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .the-family-suite .text {
+        padding: 0 4rem 0 0;
+    }
+
+    .the-family-suite .image {
+        grid-column: 2 / span 1;
+    }
+
+    .the-family-suite .gallery {
+        grid-column: span 2;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .the-family-suite .gallery .image:last-of-type {
+        grid-column: 2 / span 2;
+    }
+
+    .promos-and-offers {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .promos-and-offers h2 {
+        grid-column: 1 / span 3;
+        text-align: center;
+    }
+
+    .in-the-press {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: minmax(auto, 25vh);
+    }
+
+    .in-the-press h2 {
+        grid-column: 1 / span 3;
+    }
+
+    .the-wellhall {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: minmax(auto, 25vh);
+    }
+
+    .the-wellhall h2 {
+        grid-column: 1 / span 3;
+        text-align: start;
+        font-size: 3rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {}
