@@ -1,0 +1,444 @@
+@font-face {
+    font-family: "Antic Didone";
+    src: url('./fonts/antic-didone/AnticDidone.ttf');
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url('./fonts/open-sans/OpenSans.ttf');
+}
+
+:root {
+    --base: #ffffff;
+    --base-2: #e7e0d2;
+    --overlay: #e7e0d2dd;
+    --contrast: #333434;
+    --accent: #00405e;
+    --text-title: 3rem;
+    --text-base: 1rem;
+    --font-title: "Antic Didone";
+    --font-base: "Open Sans";
+    --content-padding: 1.5rem;
+    --content-spacing: 1rem;
+}
+
+@media screen and (min-width: 550px) {
+    :root {
+        --content-padding: 2.5rem;
+    }
+}
+
+@media screen and (min-width: 550px) {
+    :root {
+        --content-padding: 3.5rem;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-base);
+    transition: all 0.5s;
+}
+
+body {
+    font-family: var(--font-base);
+    font-size: var(--text-base);
+    color: var(--contrast);
+    background-color: var(--base);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent);
+    transition: all 0.5s;
+}
+
+a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+    color: var(--accent);
+    letter-spacing: 0.05rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-title);
+}
+
+h1 {
+    font-size: var(--text-title);
+}
+
+h2 {
+    font-size: calc(var(--text-title) / 1.4);
+}
+
+h3 {
+    font-size: calc(var(--text-title) / 1.8);
+}
+
+h4 {
+    font-size: calc(var(--text-title) / 2.2);
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+em {
+    font-family: var(--font-title);
+    color: var(--accent);
+}
+
+a.button {
+    background-color: var(--accent);
+    padding: calc(var(--content-padding) / 4) var(--content-padding);
+    display: inline-block;
+    min-width: max-content;
+    max-width: fit-content;
+    color: var(--base);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: calc(var(--text-base) / 1.2);
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--content-spacing) * 1.5);
+}
+
+.boxed {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.item {
+    padding: var(--content-padding);
+    display: flex;
+    flex-direction: column;
+    gap: var(--content-spacing);
+}
+
+header {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+header h1 {
+    padding: var(--content-padding);
+    font-size: calc(var(--font-base) - 8);
+    font-family: var(--font-base);
+    text-transform: uppercase;
+}
+
+.banner {
+    background-color: var(--overlay);
+    background-image: url('./images/image-2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: overlay;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .call-to-action {
+    padding: var(--content-padding);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: calc(var(--content-spacing) * 3);
+}
+
+.banner .call-to-action .text {
+    justify-content: start;
+    align-items: start;
+}
+
+.banner .call-to-action h2 {
+    font-size: var(--text-title);
+}
+
+@media screen and (min-width: 650px) {
+    .banner {
+        min-height: 50vh;
+        max-height: 75vh;
+    }
+
+    .banner .call-to-action {
+        flex-direction: row;
+        align-items: end;
+    }
+
+    .banner .call-to-action .text {
+        max-width: 65%;
+    }
+}
+
+.get-in-touch {
+    padding: var(--content-padding);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.get-in-touch .text {
+    flex: 1;
+    padding: var(--content-padding);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.get-in-touch .image {
+    flex: 1;
+    max-height: 40vh;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 1024px) {
+    .get-in-touch {
+        flex-direction: row;
+    }
+
+    .get-in-touch .image {
+        max-height: 50vh;
+    }
+}
+
+.what-we-focus-on {
+    background-color: var(--contrast);
+    color: var(--base);
+    padding: var(--content-padding);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--content-spacing);
+}
+
+.what-we-focus-on h2 {
+    margin-bottom: calc(var(--content-spacing) * 2);
+}
+
+.what-we-focus-on em {
+    color: var(--base-2);
+}
+
+.what-we-focus-on .item:nth-child(2) {
+    background-color: var(--accent);
+}
+
+.what-we-focus-on .item:nth-child(3) {
+    background-color: var(--base-2);
+    color: var(--contrast);
+}
+
+.what-we-focus-on .item:nth-child(4) {
+    background-color: var(--base);
+    color: var(--contrast);
+}
+
+.what-we-focus-on .image {
+    width: 100%;
+    height: 100%;
+}
+
+.what-we-focus-on .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 550px) {
+    .what-we-focus-on {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .what-we-focus-on h2 {
+        grid-column: 1 / span 2;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .what-we-focus-on {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .what-we-focus-on h2 {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 2;
+        align-self: center;
+    }
+}
+
+.our-main-services {
+    padding: var(--content-padding);
+}
+
+.our-main-services .image {
+    max-height: 40vh;
+    overflow: hidden;
+}
+
+.our-main-services .text {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--content-spacing);
+    padding: var(--content-padding);
+}
+
+.our-main-services li {
+    margin: calc(var(--content-spacing) / 2) auto;
+}
+
+@media screen and (min-width: 550px) {
+    .our-main-services .text {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .our-main-services .text h2 {
+        grid-row: 1 / span 2;
+    }
+}
+
+.testimonials-from-clients {
+    background-color: var(--base-2);
+    padding: var(--content-padding);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--content-spacing);
+    text-align: center;
+}
+
+.testimonials-from-clients .boxed {
+    margin-bottom: calc(var(--content-spacing) * 2);
+}
+
+.testimonials-from-clients .boxed h2 {
+    margin-bottom: var(--content-spacing);
+}
+
+.testimonials-from-clients .item {
+    background-color: var(--base);
+    text-align: center;
+}
+
+.testimonials-from-clients .item .icon {
+    width: var(--text-title);
+    height: var(--text-title);
+    color: var(--accent);
+    align-self: center;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+.testimonials-from-clients .item p {
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: var(--content-padding);
+}
+
+.testimonials-from-clients .item h3 {
+    color: var(--accent);
+}
+
+@media screen and (min-width: 550px) {
+    .testimonials-from-clients {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .testimonials-from-clients .boxed {
+        grid-column: 1 / span 2;
+    }
+
+    .testimonials-from-clients .item:last-child {
+        grid-column: span 2;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .testimonials-from-clients {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .testimonials-from-clients .boxed {
+        grid-column: 1 / span 3;
+    }
+
+    .testimonials-from-clients .item:last-child {
+        grid-column: span 1;
+    }
+}
+
+footer {
+    background-color: var(--contrast);
+    padding: var(--content-padding);
+    color: var(--base);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+footer h2 {
+    font-size: var(--text-base);
+    font-family: var(--font-base);
+    margin-bottom: var(--content-spacing);
+}
+
+footer h3 {
+    margin-bottom: var(--content-spacing);
+}
+
+footer .icon {
+    width: 24px;
+    height: 24px;
+}
+
+footer .icons {
+    display: flex;
+    flex-direction: row;
+    gap: var(--content-spacing);
+}
+
+@media screen and (min-width: 550px) {
+    footer {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    footer h2 {
+        grid-column: span 2;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    footer {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    footer h2 {
+        grid-column: span 1;
+        grid-row: span 2;
+    }
+}
