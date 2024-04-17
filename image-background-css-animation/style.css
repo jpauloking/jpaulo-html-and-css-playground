@@ -1,0 +1,188 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #24242499;
+    background-image: url('./images/image-0.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-blend-mode: overlay;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    animation: image-background-css-animation 20s ease-in-out 0s infinite normal forwards;
+}
+
+@keyframes image-background-css-animation {
+    0% {
+        background-image: url('./images/image-0.jpg');
+    }
+
+    5% {
+        background-image: url('./images/image-1.jpg');
+    }
+
+    20% {
+        background-image: url('./images/image-1.jpg');
+    }
+
+    25% {
+        background-image: url('./images/image-2.jpg');
+    }
+
+    40% {
+        background-image: url('./images/image-2.jpg');
+    }
+
+    45% {
+        background-image: url('./images/image-3.jpg');
+    }
+
+    60% {
+        background-image: url('./images/image-3.jpg');
+    }
+
+    65% {
+        background-image: url('./images/image-4.jpg');
+    }
+
+    80% {
+        background-image: url('./images/image-4.jpg');
+    }
+
+    85% {
+        background-image: url('./images/image-0.jpg');
+    }
+
+    100% {
+        background-image: url('./images/image-0.jpg');
+    }
+}
+
+.slider-container {
+    background-color: #242424;
+    box-sizing: border-box;
+    min-height: 50vh;
+    overflow: hidden;
+}
+
+.slider {
+    width: calc(100vw * 5);
+    height: 50vh;
+    position: relative;
+    animation-name: slider;
+    animation-duration: 30s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.slider img {
+    width: 100vw;
+    height: 100%;
+    float: right;
+    object-fit: cover;
+}
+
+@keyframes slider {
+    0% {
+        left: calc(100vw * 0);
+    }
+
+    10% {
+        left: calc(100vw * -1);
+    }
+
+    25% {
+        left: calc(100vw * -1);
+    }
+
+    35% {
+        left: calc(100vw * -2);
+    }
+
+    50% {
+        left: calc(100vw * -2);
+    }
+
+    60% {
+        left: calc(100vw * -3);
+    }
+
+    75% {
+        left: calc(100vw * -3);
+    }
+
+    85% {
+        left: calc(100vw * -4);
+    }
+
+    100% {
+        left: calc(100vw * -4);
+    }
+}
+
+.box-container {
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+}
+
+.boxes {
+    width: calc(100vw * 5);
+    box-sizing: border-box;
+    position: relative;
+    right: 0;
+    display: flex;
+    gap: 0;
+    animation: box-slider 40s linear 1s infinite normal forwards;
+}
+
+.box {
+    flex: 1;
+    height: 50vh;
+}
+
+.box:nth-child(1) {
+    background-color: red;
+}
+
+.box:nth-child(2) {
+    background-color: green;
+}
+
+.box:nth-child(3) {
+    background-color: blue;
+}
+
+.box:nth-child(4) {
+    background-color: yellow;
+}
+
+.box:nth-child(5) {
+    background-color: orange;
+}
+
+@keyframes box-slider {
+    0% {
+        right: calc(100vw * 0);
+    }
+
+    25% {
+        right: calc(100vw * 1);
+    }
+
+    50% {
+        right: calc(100vw * 2);
+    }
+
+    75% {
+        right: calc(100vw * 3);
+    }
+
+    100% {
+        right: calc(100vw * 4);
+    }
+}
